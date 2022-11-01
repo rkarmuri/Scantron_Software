@@ -4,6 +4,8 @@
         <meta charset="UTF-8" />
         <title>Scantron Software</title>
         <link rel="icon" type="image/x-icon" href="images/slu_favicon.png">
+        <meta name="google-signin-client_id" content="729076506130-3prifeqja8i7m3htl1pn09oehno585rr.apps.googleusercontent.com">
+        <script src="https://apis.google.com/js/platform.js" async defer></script>
         <script src="https://code.jquery.com/jquery-migrate-3.3.2.js"
         integrity="sha256-BDmtN+79VRrkfamzD16UnAoJP8zMitAz093tvZATdiE=" crossorigin="anonymous"></script>
         <link href="cascade.css" rel="stylesheet">
@@ -18,7 +20,7 @@
                                     <ul>
                                     <li><a class="nav-link active" href="#">Home</a></li>
                                     <li><a href="#">About</a></li>
-                                    <li><a href="login.html">Sign In</a></li>
+                                    <div class="g-signin2" data-onsuccess="onSignIn"></div>
                                 </ul>
                                 </nav>
                             </div>
@@ -27,13 +29,21 @@
                             <h1 class="cover-heading">Scan and Grade</h1>
                             <a class="lead">
                             <button a href="about.html" class="btn">More Info</button>
-                            </p>
                             </main>
                         
                             <article class="lead">
-                                <p>Scantron software is an open source application.
-                                <br>It is designed to serve SLU faculty to grade the students' Scantron sheets.</br></p>
+                                <p>Scantron software is an open source application
+                                <br>that is designed to serve SLU faculty to grade the students' Scantron sheets.</br></p>
                             </article>
+                            <script>
+                            function onSignIn(googleUser) {
+                                var profile = googleUser.getBasicProfile();
+                                console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
+                                console.log('Name: ' + profile.getName());
+                                console.log('Image URL: ' + profile.getImageUrl());
+                                console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
+                              }
+                            </script>
                         <footer class="mastfoot mt-auto">
                                 <div class="inner">
                                     <p>Visit us at <a href="https://www.slu.edu/" target="_self" class="kick">SLU</a>.</p>

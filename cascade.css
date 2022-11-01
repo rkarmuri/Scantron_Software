@@ -93,19 +93,22 @@ button {
 
 .cover-heading{
   font-size: 40px;
+  color:#003DA5;
 }
 
 .lead{
   font-size: 30px;
+  color:#003DA5;
 }
 .mastfoot {
-  color: whitesmoke;
+  color: white;
   text-shadow: 0 .05rem .1rem rgba(0, 0, 0, .5);
 }
 
 .kick{
 color: white;
 }
+
 footer {
   position:fixed;
   background-color: #003DA5;

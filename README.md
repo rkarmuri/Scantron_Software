@@ -1,6 +1,12 @@
 # Scantron_Software
 A web application developed to serve SLU faculty in grading scantron sheets.
 
+Developed by:
+Raju Karmuri
+Aaron Bi
+Joseph Gutierrez
+Julian Ramirez
+
 # How to run Front-end react App
 1. In your command prompt, go to the scantron-app folder.
 2. Type in your command line to start react app:

@@ -12,3 +12,14 @@ npm start
 ```
 python get_file.py
 ```
+5. In the Homepage, validate you can use the single form to upload pdf files to the html. Back-end processing is not active yet.
+
+# How files in Scantron project work
+- scantron-app folder will be handling the front-end application with React
+- Within the 'back-end python' folder, the readbub.py file carries all the logic to run computer vision algorithms that compute responses
+    - To run this functionality, go to the 'back-end python' folder and run 
+    ```
+    python readbub.py
+    ```
+- Within the 'back-end python' folder, get_file.py contains the Flask logic to generate an endpoint to connect with the front end
+- The deprecated folder stores files that were originally part of the project. This folder may be deleted once they are no longer useful

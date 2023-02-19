@@ -32,7 +32,7 @@ class Upload extends Component {
     }
   
     handleSubmit(event) {
-        //alert('A name was submitted: ');
+        alert('File Submission processing...');
 
         //this.uploadFileToFlask();
         this.uploadFileToFlask();

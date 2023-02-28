@@ -3,3 +3,4 @@ tensorflow
 imutils
 opencv-python
 matplotlib
+flask

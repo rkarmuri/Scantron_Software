@@ -1,0 +1,177 @@
+/* .App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+} */
+
+
+html,
+body {
+    height: 100%;
+    background-size: cover;
+    background-color: whitesmoke;
+}
+
+body{
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+nav{
+  background-color: #003DA5;
+  position: fixed;
+  right: 0;
+  left: 0;
+}
+
+.main-title{
+  color: #003DA5;
+}
+
+ul.navigation li {
+  display: inline;
+  list-style-type: none;
+  margin: 0;
+}
+ul.navigation {
+  padding: 0;
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+}
+ul.navigation li a {
+  color: #FFF;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 15px;
+  margin-right: 10px;
+  display: inline-block;
+}
+
+.masthead-brand {
+  margin-bottom: 0;
+  font-size: 50px;
+  color: #003DA5;
+}
+
+.unorder {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color:#003DA5;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+}
+.nav-masthead .active {
+  color:whitesmoke;
+  font-size: 25px;
+}
+
+.cover {
+  color: #fff;
+  /* background-image: url(images/faculty.jpg); */
+  background-attachment: fixed;
+  background-position:top;
+  background-repeat: no-repeat;
+  background-size:auto;
+  font-size: 40px;
+  text-shadow: 0 .05rem .1rem rgba(0, 0, 0, .5);
+}
+
+.button {
+  background-color: whitesmoke;
+  border-radius: 8px;
+  box-sizing: border-box;
+  color: #003DA5;
+  padding: 14px 20px;
+  text-align: center;
+  text-shadow: rgba(0, 0, 0, 0.25) 0 3px 8px;
+  display: inline-block;
+  font-size: 20px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+.button:hover{
+  box-shadow: rgba(80, 63, 205, 0.5) 0 1px 30px;
+  transition-duration: .1s;
+}
+
+.cover-heading{
+  font-size: 40px;
+  color:#003DA5;
+}
+
+.mastfoot {
+  position:fixed;
+  background-color: #003DA5;
+  font-size: 20px;
+  color:#fff;
+  padding-bottom: 20px;
+  margin-top: auto;
+  bottom: 0;
+  left:0;
+  width: 100%;
+  height: 80px;
+}
+
+.kick{
+color: white;
+}
+
+.alpha,.gamma,.beta,.texts,.moreinfo{
+color:#003DA5;
+font-size: 30px;
+margin-top: 40px;
+margin-bottom: 40px;
+padding-left: 80px;
+padding-right: 40px;
+text-align: justify;
+}
+
+footer, .title-header{
+  text-align: center;
+}
+
+.lead{
+  text-align: center;
+}
+
+.form-container{
+  margin: 0 auto;
+  width: 50%;
+}

@@ -1,0 +1,130 @@
+html,
+body {
+    height: 100%;
+    background-size: cover;
+    background-color: whitesmoke;
+}
+
+@font-face {
+  font-family: myFont;
+  src: url(Brandon_reg.otf);
+}
+
+* {
+  font-family: myFont;
+}
+
+.masthead-brand {
+  margin-bottom: 0;
+  font-size: 50px;
+  color: #003DA5 ;
+}
+
+.unorder {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color:#003DA5;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  position: relative;
+  text-align: center;
+  padding: 14px 20px;
+  text-decoration: none;
+  font-size: 25px;
+  color: whitesmoke;
+}
+
+li a:after{
+  content: '';
+  position: absolute;
+  width: 0; height: 3px;
+  display: block;
+  margin-top: 5px;
+  left: 0;
+  background: #fff;
+  transition: width .2s ease;
+  -webkit-transition: width .2s ease;
+}
+
+li a:hover:after{
+  width: 100%;
+  right: 1;
+  background: #fff;
+}
+
+.nav-masthead .active {
+  color:whitesmoke;
+  font-size: 25px;
+}
+
+.cover {
+  color: #fff;
+  background-image: url(images/faculty.jpg);
+  background-attachment: fixed;
+  background-position:top;
+  background-repeat: no-repeat;
+  background-size:auto;
+  font-size: 40px;
+  text-shadow: 0 .05rem .1rem rgba(0, 0, 0, .5);
+}
+
+.button {
+  background-color: whitesmoke;
+  border-radius: 8px;
+  box-sizing: border-box;
+  color: #003DA5;
+  padding: 14px 20px;
+  text-align: center;
+  text-shadow: rgba(0, 0, 0, 0.25) 0 3px 8px;
+  display: inline-block;
+  font-size: 20px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+.button:hover{
+  box-shadow: rgba(80, 63, 205, 0.5) 0 1px 30px;
+  transition-duration: .1s;
+}
+
+.cover-heading{
+  font-size: 40px;
+  color:#003DA5;
+}
+
+.mastfoot {
+  position:fixed;
+  background-color: #003DA5;
+  font-size: 20px;
+  color:#fff;
+  padding-bottom: 20px;
+  margin-top: auto;
+  bottom: 0;
+  width: 100%;
+  height: 80px;
+}
+
+.kick{
+color: white;
+}
+
+.alpha,.gamma,.beta,.texts,.moreinfo{
+color:#003DA5;
+font-size: 30px;
+margin-top: 40px;
+margin-bottom: 40px;
+padding-left: 80px;
+padding-right: 40px;
+text-align: justify;
+}

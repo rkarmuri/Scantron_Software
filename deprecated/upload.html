@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Upload Files</title>
+    <link rel="icon" type="image/x-icon" href="images/slu_favicon.png">
+    <link href="cascade.css" rel="stylesheet">
+  </head>
+
+  <body>
+    <center>
+        <header class="masthead mb-auto">
+            <div class="inner">
+                <h3 class="masthead-brand">Scantron Software</h3>
+                <nav class="nav nav-masthead justify-content-center">
+                    <ul class="unorder">
+                    <li><a class="nav-link active" href="home.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                </ul>
+                </nav>
+            </div>
+        </header>
+        <h1>Upload the solution file here (CSV file)</h1>
+        <form action="upload1.py" method="post" enctype="multipart/form-data"> 
+            <input type="file" name="filetoUpload" accept=".jpg, .jpeg, .png, .pdf, .csv"/>
+            <input type='submit' name='submit' value='Upload'>
+        </form>
+        <form action="upload2.py" method="post" enctype="multipart/form-data">
+        <h2>Upload the students' answer file here (PDF file)</h2>
+            <input type="file" name="file-uploader" accept=".jpg, .jpeg, .png, .pdf, .csv">
+            <input type='submit' name='submit' value='Upload'>
+        </form>
+        <footer class="mastfoot mt-auto">
+            <div class="inner">
+                <p>Visit us at <a href="https://github.com/rkarmuri/Scantron_Software" target="_self" class="kick">GitHub</a>.</p>
+            </div>
+        </footer>
+    </center>
+  </body>
+</html>

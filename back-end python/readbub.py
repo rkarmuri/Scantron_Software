@@ -5,7 +5,7 @@ import imutils
 import numpy as np
 import cv2
 
-image = cv2.imread('img3.jpg')
+image = cv2.imread('../images/img3.jpg')
 image = cv2.resize(image,(1876,2456))
 y=226
 x=150

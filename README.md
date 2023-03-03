@@ -1,12 +1,11 @@
 # Scantron_Software
 A web application developed to serve SLU faculty in grading scantron sheets.
 
-######issue-1-julian
 Developed by:
-Raju Karmuri
-Aaron Bi
-Joseph Gutierrez
-Julian Ramirez
+Raju Karmuri\
+Aaron Bi\
+Joseph Gutierrez\
+Julian Ramirez\
 
 # installing requirements for Back-end
 to install required libraries for the python Back-end simply run this command
@@ -36,6 +35,6 @@ python get_file.py
     ```
 - Within the 'back-end python' folder, get_file.py contains the Flask logic to generate an endpoint to connect with the front end
 - The deprecated folder stores files that were originally part of the project. This folder may be deleted once they are no longer useful
+
 =======
 Website: https://www.scantronsoftwareslu.com/
-#######main

@@ -1,73 +1,37 @@
 import React, { Component } from "react";
+// import Form from "./Form";
+import axios from "axios";
  
 class Upload extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {value: ''};
-    this.ROOT_URL = "http://localhost:5000";
 
-    this.uploadFileToFlask = this.uploadFileToFlask.bind(this);
-    this.uploadToFolder = this.uploadToFolder.bind(this);
-    this.handleSubmit = this.handleSubmit.bind(this);
-  }
-    
-    uploadFileToFlask(){
-      console.log("starting uploadFileToFlask...")
-      const files = document.querySelector('[type=file]').files;
-      const formData = new FormData();
-      const input = document.getElementById('files');
-      
-      for (let i = 0; i < files.length; i++) {
-          let file = files[i]
-          
-          formData.append('file', file)
-      }
+  submitForm () {
+    //const files = document.querySelector('[type=file]').files;
+    const fileSolution =  document.querySelector('[name=fileSolution]').files;
+    const fileAnswers =  document.querySelector('[name=fileAnswers]').files;
+    const formData = new FormData();
+    //formData.append("name", name);
+    //formData.append("file", selectedFile);
+    console.log(fileSolution[0]);
+    console.log(fileAnswers[0]);
+    console.log("-------------------")
 
-      formData.append('file', input.files[0])
-      console.log(input.files[0])
-      let file_name = input.files[0].name;
-      //console.log(file_name);
-      console.log("1",file_name);
-      const response = this.uploadToFolder(formData, file_name)
-    }
+    formData.append('fileSolution', fileSolution[0]);
+    formData.append('fileAnswers', fileAnswers[0]);
+    // for (let i = 0; i < files.length; i++) {
+    //   let file = files[i]
+    //   console.log(file);
+    //   formData.append('file', file)
+    // }
   
-    handleSubmit(event) {
-        alert('File Submission processing...');
+    axios
+      .post("http://localhost:5000/upload_file", formData)
+      .then((res) => {
+        alert("File Upload success");
+        console.log(res);
+      })
+      .catch((err) => alert("File Upload Error"));
+  };
 
-        //this.uploadFileToFlask();
-        this.uploadFileToFlask();
-
-        event.preventDefault();
-      }
-
-      
-      uploadToFolder(file, file_name) {
-        
-        fetch(this.ROOT_URL+'/upload_file', { // Your POST endpoint
-          method: 'POST',
-          headers: {
-            "enctype": "multipart/form-data"
-          },
-          body: file // This is your file object
-        })
-        .then(prior => prior.json()).then(
-          response => {
-            console.log(response)
-            if (response.success === "True"){
-                      console.log("2",file_name);
-              return true
-            } else {
-              alert('There was an error, please try again. Verify it is a csv file')
-              //hideAllElements();
-              return false
-            }
-          } 
-        ).catch(
-          error => {
-                  console.log("ERROR!");
-              }
-        )
-      };
   render() {
     return (
       <div>
@@ -79,22 +43,22 @@ class Upload extends Component {
         <hr></hr>
         <div className="form-container">
         <h2>Upload your files here</h2>
-            <form onSubmit={this.handleSubmit}>
+            <form onSubmit={this.submitForm}>
                 <label>Upload solution file in PDF format</label>
                 <br></br>
-                <input type="file" name="filetoUpload" accept=".pdf, .csv"/>
+                <input type="file" name="fileSolution" accept=".pdf, .csv"/>
                 <br></br>
                 <br></br>
                 <label>Upload students' answers in PDF format here</label>
                 <br></br>
-                <input type="file" name="file-uploader" accept=".pdf, .csv"></input>
+                <input type="file" name="fileAnswers" accept=".pdf, .csv"></input>
                 <br></br>
                 <br></br>
                 <br></br>
                 <button type="submit">Submit</button>
             </form>
         </div>
-        
+        {/* <Form></Form> */}
       </div>
     );
   }

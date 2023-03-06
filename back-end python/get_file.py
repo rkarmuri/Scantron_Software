@@ -32,8 +32,8 @@ def upload_file():
 def file_handling(temp_path):
     """processes the file submission"""
     # print(request)
-    if ('fileSolution' or 'fileAnswers') not in request.files:
-        return False
+    # if ('fileSolution' or 'fileAnswers') not in request.files:
+    #     return False
 
     # file = request.files['file']
     
@@ -48,10 +48,10 @@ def file_handling(temp_path):
     fileSolution = request.files['fileSolution']
     fileAnswers = request.files['fileAnswers']
 
-    fileSolution.save(temp_path + '/solution.pdf')
+    fileSolution.save(temp_path + '/solution.csv')
     fileAnswers.save(temp_path + '/answers.pdf')
 
-    return False
+    return jsonify({'success': 'True'})
 
 def allowed_file(filename):
     """Determines the file submitted has an accepted extension"""

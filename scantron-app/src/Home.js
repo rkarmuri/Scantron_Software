@@ -1,10 +1,22 @@
 import React, { Component } from "react";
-// import Form from "./Form";
 import axios from "axios";
+import { Navigate } from "react-router-dom";
  
 class Upload extends Component {
+  constructor(props){
+    super(props);
 
-  submitForm () {
+    this.state = {
+      submitted: null
+    };
+    
+    this.submitForm = this.submitForm.bind(this);
+
+  }
+  
+
+  submitForm (e) {
+    e.preventDefault();
     //const files = document.querySelector('[type=file]').files;
     const fileSolution =  document.querySelector('[name=fileSolution]').files;
     const fileAnswers =  document.querySelector('[name=fileAnswers]').files;
@@ -22,34 +34,46 @@ class Upload extends Component {
     //   console.log(file);
     //   formData.append('file', file)
     // }
-  
+    let submitted = null;
     axios
       .post("http://localhost:5000/upload_file", formData)
       .then((res) => {
         alert("File Upload success");
         console.log(res);
+        submitted = true;
+        // this.setState({submitted});
+       // navigate('/loading');
+        
       })
-      .catch((err) => alert("File Upload Error"));
+      .catch((err) => {
+        alert("File Upload Error")
+        submitted = null;
+      });
+      this.setState({submitted});
   };
 
   render() {
+
+    let {submitted} = this.state;
     return (
-      <div>
-                
+      <div>             
         <article className="lead">
             <p>Scantron software is an open source application
             that is designed to serve SLU faculty to grade the students' Scantron sheets.</p>
         </article>
         <hr></hr>
         <div className="form-container">
-        <h2>Upload your files here</h2>
+        { 
+          submitted == true && (<Navigate to="/Loading" replace={true} />
+        )}
+        <h2>Upload your files below:</h2>
             <form onSubmit={this.submitForm}>
-                <label>Upload solution file in PDF format</label>
+                <label>Upload <b>solution</b> file in CSV format</label>
                 <br></br>
                 <input type="file" name="fileSolution" accept=".pdf, .csv"/>
                 <br></br>
                 <br></br>
-                <label>Upload students' answers in PDF format here</label>
+                <label>Upload students' <b>answers</b> in PDF format here</label>
                 <br></br>
                 <input type="file" name="fileAnswers" accept=".pdf, .csv"></input>
                 <br></br>

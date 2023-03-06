@@ -10,7 +10,7 @@ app.debug = True
 cors = CORS(app)
 app.config['CORS_HEADERS'] = 'Content-Type'
 
-TEMP_PATH = "./Assets/Temp/temporary.pdf"
+TEMP_PATH = "./temp"
 
 def allowed_file_extensions():
     """allowed file extensions"""
@@ -20,7 +20,7 @@ def allowed_file_extensions():
 @cross_origin()
 def upload_file():
     """handling file upload"""
-    delete_file(TEMP_PATH)
+    #delete_file(TEMP_PATH)
 
     file_upload = file_handling(TEMP_PATH)
 
@@ -31,17 +31,25 @@ def upload_file():
 
 def file_handling(temp_path):
     """processes the file submission"""
-    if 'file' not in request.files:
+    # print(request)
+    if ('fileSolution' or 'fileAnswers') not in request.files:
         return False
 
-    file = request.files['file']
+    # file = request.files['file']
+    
 
-    if file.filename == '':
-        return False
+    # if file.filename == '':
+    #     return False
 
-    if file and allowed_file(file.filename):
-        file.save(temp_path)
-        return jsonify({'success': 'True'})
+    # if file and allowed_file(file.filename):
+    #     file.save(temp_path)
+    #     return jsonify({'success': 'True'})
+
+    fileSolution = request.files['fileSolution']
+    fileAnswers = request.files['fileAnswers']
+
+    fileSolution.save(temp_path + '/solution.pdf')
+    fileAnswers.save(temp_path + '/answers.pdf')
 
     return False
 

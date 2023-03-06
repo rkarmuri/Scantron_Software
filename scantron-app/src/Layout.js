@@ -1,10 +1,12 @@
 import { Outlet, Link } from "react-router-dom";
+import SluLogo from "./slu-2-centered-blue-rgb.png"
 
 const Layout = () => {
   return (
     <>
+    <img src={SluLogo} className="slu-logo"></img>
     <h1 className="title-header main-title">Scantron Software</h1>
-      <nav>        
+      {/* <nav>        
         <ul className="navigation">
           <li>
             <Link to="/">Home</Link>
@@ -13,11 +15,11 @@ const Layout = () => {
             <Link to="/upload">Upload</Link>
           </li>
         </ul>
-      </nav>
+      </nav> 
         <br></br>
         <br></br>
         <br></br>
-        <br></br>
+        <br></br>*/}
 
 
       <Outlet />

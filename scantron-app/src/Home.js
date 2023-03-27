@@ -72,27 +72,30 @@ class Upload extends Component {
 
     
     return (
-      <div>             
-        <article className="lead">
-            <p>Scantron software is an open source application
-            that is designed to serve SLU faculty to grade the students' Scantron sheets.</p>
-        </article>
-        <hr></hr>
+      <div>
+        <div className="header-content">
+          <article className="lead">
+              <p>Scantron software is an open source application
+              that is designed to serve SLU faculty to grade the students' Scantron sheets.</p>
+          </article>
+          <hr></hr>
+        </div>          
+        
         <div className="form-container">
         <h2>Upload your files below:</h2>
             <form onSubmit={this.submitForm}>
                 <label>Upload <b>solution</b> file in CSV format</label>
                 <br></br>
-                <input type="file" name="fileSolution" accept=".pdf, .csv"/>
+                <input className="btn-input" type="file" name="fileSolution" accept=".pdf, .csv"/>
                 <br></br>
                 <br></br>
                 <label>Upload students' <b>answers</b> in PDF format here</label>
                 <br></br>
-                <input type="file" name="fileAnswers" accept=".pdf, .csv"></input>
+                <input className="btn-input" type="file" name="fileAnswers" accept=".pdf, .csv"></input>
                 <br></br>
                 <br></br>
                 <br></br>
-                <button type="submit">Submit</button>
+                <button type="submit" className="btn-submit">Submit</button>
             </form>
         </div>
       </div>

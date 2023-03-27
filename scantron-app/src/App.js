@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Layout from "./Layout";
 import Upload from "./Upload";
 import Home from "./Home";
+//import NewHome from "./NewHome";
 import Loading from './Loading';
 
 function App() {

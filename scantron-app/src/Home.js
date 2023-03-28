@@ -46,8 +46,8 @@ class Upload extends Component {
   render() {
     if (this.state.isLoading) {
       return (
-        <div className="form-container">
-            Loading...
+        <div className="form-container loading">
+            <p>Loading...</p>
         </div>
       )
     }

@@ -169,6 +169,12 @@ button{
   margin-bottom: 20px;
 }
 
+.loading{
+  width: 100%;
+  text-align: center;
+  margin-top: 200px;
+}
+
 @media screen and (min-width: 768px) {
   .btn-submit{
     width: auto;

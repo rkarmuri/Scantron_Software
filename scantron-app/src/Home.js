@@ -33,7 +33,6 @@ class Upload extends Component {
       .then((res) => {
         
         console.log(res);
-        //submitted = true;   
         this.setState({ isLoading: false });
         this.setState({ showResults: true});
         alert("File Upload success");
@@ -46,8 +45,8 @@ class Upload extends Component {
   render() {
     if (this.state.isLoading) {
       return (
-        <div className="form-container loading">
-            <p>Loading...</p>
+        <div className="form-container">
+            <p className="loading">Loading...</p>
         </div>
       )
     }
@@ -59,8 +58,6 @@ class Upload extends Component {
             <h2>Results Here:</h2>
             {/* <p><a href='../../back-end python/temp/grades.csv' download>grades.csv</a></p> */}
             <p><a href='../grades.csv' download>Grades.csv</a></p>
-            <br></br>
-            <br></br>
             <br></br>
             <br></br>
             <p><a href='/'>Start Over</a></p>
@@ -84,7 +81,7 @@ class Upload extends Component {
         <div className="form-container">
         <h2>Upload your files below:</h2>
             <form onSubmit={this.submitForm}>
-                <label>Upload <b>solution</b> file in CSV format</label>
+                <label>Upload <b>Answer Key</b> file in CSV format</label>
                 <br></br>
                 <input className="btn-input" type="file" name="fileSolution" accept=".pdf, .csv"/>
                 <br></br>

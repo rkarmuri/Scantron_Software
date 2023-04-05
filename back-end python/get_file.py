@@ -31,25 +31,13 @@ def upload_file():
 
 def file_handling(temp_path):
     """processes the file submission"""
-    # print(request)
-    # if ('fileSolution' or 'fileAnswers') not in request.files:
-    #     return False
-
-    # file = request.files['file']
-    
-
-    # if file.filename == '':
-    #     return False
-
-    # if file and allowed_file(file.filename):
-    #     file.save(temp_path)
-    #     return jsonify({'success': 'True'})
-
     fileSolution = request.files['fileSolution']
     fileAnswers = request.files['fileAnswers']
 
     fileSolution.save(temp_path + '/solution.csv')
     fileAnswers.save(temp_path + '/answers.pdf')
+
+    #Process for python processing goes here
 
     return jsonify({'success': 'True'})
 

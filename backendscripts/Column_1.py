@@ -3,7 +3,7 @@ import cv2
 import numpy as np
  
 def Column1():
-    img = cv2.imread('backendscripts\downloaded_images')
+    img = cv2.imread('downloaded_images/scantron-page0.jpg')
     print(img.shape) # Print image shape
     cv2.imshow("original", img)
     

@@ -17,7 +17,11 @@ body {
 .masthead-brand {
   margin-bottom: 0;
   font-size: 50px;
-  color: #003DA5 ;
+  color: #003DA5;
+}
+
+.inner-cover{
+  text-align: center;
 }
 
 .unorder {
@@ -26,7 +30,6 @@ body {
   padding: 0;
   overflow: hidden;
   background-color:#003DA5;
-  position: -webkit-sticky;
   position: sticky;
   top: 0;
 }
@@ -63,12 +66,12 @@ li a:hover:after{
   background: #fff;
 }
 
-.nav-masthead .active {
+.nav-masthead {
   color:whitesmoke;
   font-size: 25px;
 }
 
-.cover {
+.inner-cover {
   color: #fff;
   background-image: url(images/faculty.jpg);
   background-attachment: fixed;
@@ -79,7 +82,7 @@ li a:hover:after{
   text-shadow: 0 .05rem .1rem rgba(0, 0, 0, .5);
 }
 
-.button {
+.btn {
   background-color: whitesmoke;
   border-radius: 8px;
   box-sizing: border-box;
@@ -91,9 +94,10 @@ li a:hover:after{
   font-size: 20px;
   margin: 4px 2px;
   cursor: pointer;
+  border: none;
 }
 
-.button:hover{
+.btn:hover{
   box-shadow: rgba(80, 63, 205, 0.5) 0 1px 30px;
   transition-duration: .1s;
 }
@@ -127,4 +131,21 @@ margin-bottom: 40px;
 padding-left: 80px;
 padding-right: 40px;
 text-align: justify;
+}
+
+.lead {
+  text-align: center;
+  font-size: 2rem;
+  color: #003DA5;
+}
+
+.inner {
+  text-align: center;
+}
+
+.upload-container {
+  margin-top: 20px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }

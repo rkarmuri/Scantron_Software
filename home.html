@@ -11,21 +11,21 @@
         <link href="cascade.css" rel="stylesheet">
  </head>
     <body class="text-center">
-        <center>
-                <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
-                        <header class="masthead mb-auto">
+        <section>
+                <div class="cover-container">
+                        <header class="masthead">
                             <div class="inner">
-                                <h3 class="masthead-brand">Scantron Software</h3>
-                                <nav class="nav nav-masthead justify-content-center">
-                                    <ul>
-                                    <li><a class="nav-link active" href="#">Home</a></li>
-                                    <li><a href="#">About</a></li>
-                                    <div class="g-signin2" data-onsuccess="onSignIn"></div>
+                                <h3 class="masthead-brand" style="text-align:center;">Scantron Software</h3>
+                                <nav class="nav">
+                                    <ul class="unorder">
+                                    <li><a class="nav-link" href="#">Home</a></li>
+                                    <li><a href="about.html">About</a></li>
+                                    <li><a href="upload.html">Upload</a></li>
                                 </ul>
                                 </nav>
                             </div>
                         </header>
-                        <main role="main" class="inner cover">
+                        <main role="main" class="inner-cover">
                             <h1 class="cover-heading">Scan and Grade</h1>
                             <a class="lead">
                             <button a href="about.html" class="btn">More Info</button>
@@ -44,11 +44,11 @@
                                 console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
                               }
                             </script>
-                        <footer class="mastfoot mt-auto">
+                        <footer class="mastfoot">
                                 <div class="inner">
                                     <p>Visit us at <a href="https://www.slu.edu/" target="_self" class="kick">SLU</a>.</p>
                                 </div>
                             </footer>
-                </center>
+                </section>
     </body>
 </html>
